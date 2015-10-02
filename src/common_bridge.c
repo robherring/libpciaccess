@@ -333,7 +333,7 @@ pci_device_get_parent_bridge(struct pci_device *dev)
     struct pci_id_match bridge_match = {
         PCI_MATCH_ANY, PCI_MATCH_ANY, PCI_MATCH_ANY, PCI_MATCH_ANY,
         (PCI_CLASS_BRIDGE << 16) | (PCI_SUBCLASS_BRIDGE_PCI << 8),
-        (PCI_CLASS_MASK << 16) | (PCI_SUBCLASS_MASK << 8)
+        (PCI_CLASS_MASK << 16) | (PCI_SUBCLASS_MASK << 8), 0
     };
 
     struct pci_device *bridge;

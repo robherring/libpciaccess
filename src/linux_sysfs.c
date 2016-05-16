@@ -51,7 +51,7 @@
 #include <errno.h>
 #include <limits.h>
 
-#if defined(__i386__) || defined(__x86_64__) || defined(__arm__)
+#if 0
 #include <sys/io.h>
 #else
 #define inb(x) -1

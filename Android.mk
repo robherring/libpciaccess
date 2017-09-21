@@ -10,13 +10,14 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 PCI_IDS := hwdata/pci.ids
-PCI_IDS_GZ := $(TARGET_OUT_ETC)/$(PCI_IDS).gz
+PCI_IDS_GZ := $(TARGET_OUT_VENDOR)/etc/$(PCI_IDS).gz
 
 $(PCI_IDS_GZ): $(LOCAL_PATH)/$(PCI_IDS) | $(MINIGZIP)
 	$(hide) mkdir -p $(@D) && $(MINIGZIP) -9 < $< > $@
 
 LOCAL_MODULE := libpciaccess
 LOCAL_MODULE_TAGS := optional
+LOCAL_PROPRIETARY_MODULE := true
 LOCAL_ADDITIONAL_DEPENDENCIES := $(PCI_IDS_GZ)
 
 LOCAL_SRC_FILES := \

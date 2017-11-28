@@ -39,6 +39,7 @@ LOCAL_CFLAGS := \
     -DHAVE_STRING_H \
     -DPCIIDS_PATH=\"/etc/hwdata\" \
     -Wno-unused-parameter \
+    -Wno-error
 
 LOCAL_EXPORT_C_INCLUDE_DIRS := \
     $(LOCAL_PATH)/include \
